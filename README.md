@@ -42,7 +42,7 @@ Additional final-phase deliverables: **live podcast script for 3 people, recordi
 - Record the original team video. Replace `VIDEO_ID` in `script.js` with the 11-character ID from your team's public YouTube video. The page will show its video and QR automatically.
 - Add a dedicated contact email **only if the group approves making it public**. Do not publish personal phone numbers.
 - Practice the script together; each person has a defined speaking part.
-- Check the external image API, video, QR and maps on the classroom Wi-Fi. The campaign's additional poster is saved locally in `assets/poster-campana.png`.
+- Check the external image API, video, QR and maps on the classroom Wi-Fi. The campaign's additional poster is saved locally in `assets/poster-campana.svg`.
 - If no internet is available, the page's headings, text, graphics and local poster still work; external services need connectivity.
 
 ## ⚠ Source accuracy
