@@ -73,3 +73,40 @@
 @media (max-width: 900px){.theme-grid{grid-template-columns:1fr}.theme-card img{height:230px}}
 /* Accessible fallback and source credits for supporting visual comparisons. */
 .gallery-credit{display:inline-block;color:#c9ef91;font-size:12px;font-weight:800;padding:4px 0 9px}
+
+
+/* THREE MATCHING COUNTRY TOPICS: wildlife, food and tourism/culture */
+.topic-map{grid-column:span 12;min-height:210px;display:grid;grid-template-columns:minmax(190px,1fr) minmax(260px,2.5fr) minmax(125px,.65fr);align-items:center;gap:18px}
+.topic-map .card-top{margin:0}
+.topic-map iframe{height:178px;margin:0}
+.topic-map>.text-link{font-size:12px;align-self:center}
+.topic-trio-heading{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:8px 5px 1px;color:#eaffeb}
+.topic-trio-heading strong{font:800 clamp(22px,2.4vw,32px)/1.15 var(--display);letter-spacing:-.035em}
+.topic-trio-heading span{color:#aee0cc;font-size:12px}
+.info-card.country-topic{grid-column:span 4;display:flex;flex-direction:column;gap:10px;min-height:430px;padding:18px;background:linear-gradient(160deg,#123d40 0%,#082c36 100%)}
+.country-topic .topic-label{display:flex;align-items:start;justify-content:space-between;gap:8px}
+.country-topic .topic-label span{font:800 clamp(19px,1.65vw,24px)/1.15 var(--display);letter-spacing:-.03em;color:#f3fff2}
+.country-topic .topic-label small{font-size:10px;font-weight:900;color:var(--lime);white-space:nowrap}
+.country-topic>p{margin:1px 0;font-size:13px;line-height:1.55}
+.country-topic .topic-spoken{font-weight:800;color:#c9fa9a;font-size:12px}
+.country-topic .topic-picture{margin:auto 0 0;border:1px solid #d4fbd23b;border-radius:15px;overflow:hidden;background:#194f52}
+.country-topic .topic-picture img{width:100%;height:190px;object-fit:cover;display:block;background:#194f52}
+.country-topic .topic-picture figcaption{padding:10px 11px;display:grid;gap:3px;background:#0d363b}
+.country-topic .topic-picture figcaption strong{font-size:10px;letter-spacing:.08em;color:#ecffdf}
+.country-topic .topic-picture figcaption a{color:#a7dfd1;font-size:10px;line-height:1.35;text-decoration:none}
+.country-topic .topic-picture figcaption a:hover{text-decoration:underline}
+.country-eco-note{grid-column:1/-1;padding:18px 22px;border:1px solid #b7f5a64a;border-radius:16px;background:#b7ed9a12;color:#cce6de;font-size:14px;line-height:1.6}
+.country-eco-note strong{color:#bff489}
+.country-eco-note span{color:#e6ffd5;font-weight:800;margin-left:5px}
+.country-eco-note a{color:#bbf0d3}
+.support-page-body .theme-card{display:flex;flex-direction:column;min-height:420px}
+.support-page-body .theme-card .theme-card-content{min-height:136px}
+.support-page-body .theme-card .topic-picture{margin:auto 0 0;border:1px solid #bfe7c13e;border-radius:16px;overflow:hidden}
+.support-page-body .theme-card .topic-picture img{display:block;width:100%;height:270px;object-fit:cover;background:#174b50}
+.support-page-body .theme-card .topic-picture figcaption{display:grid;gap:3px;padding:12px;background:#123b3c}
+.support-page-body .theme-card .topic-picture figcaption strong{font-size:12px;color:#f2fff5}
+.support-page-body .theme-card .topic-picture figcaption a{font-size:11px;color:#bce9d5}
+.support-page-body .theme-card p.mini-script{font-size:12px;color:#d1f9a7}
+@media(max-width:980px){.topic-map{grid-template-columns:1fr 2fr}.topic-map .card-top{grid-column:1}.topic-map iframe{grid-column:2;grid-row:1/3}.topic-map>.text-link{grid-column:1}.info-card.country-topic{grid-column:span 6}.topic-trio-heading span{display:none}}
+@media(max-width:640px){.topic-map{grid-template-columns:1fr;gap:12px}.topic-map .card-top,.topic-map iframe,.topic-map>.text-link{grid-column:1;grid-row:auto}.topic-map iframe{height:190px}.info-card.country-topic{grid-column:span 12;min-height:unset}.topic-trio-heading strong{font-size:26px}.country-topic .topic-picture img{height:220px}.support-page-body .theme-card .topic-picture img{height:220px}}
+@media print{.country-topic .topic-picture img{max-height:150px}.topic-map iframe{display:none}}
