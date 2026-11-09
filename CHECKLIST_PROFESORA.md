@@ -17,7 +17,7 @@
 | Zero, First, Second Conditional | Sections 02, 05; oral script |
 | Past Perfect and lessons learned | Section 04 and podcast |
 | Phase 1 research / country profiles / organizations / vocabulary | Sections 01–05 + reference links |
-| Phase 2 proposed campaign and promotional material | Section 05 + `assets/poster-campana.png` |
+| Phase 2 proposed campaign and promotional material | Section 05 + `assets/poster-campana.svg` |
 | Phase 3 final website and oral presentation | Entire site + script |
 
 ### Items the group must finish
