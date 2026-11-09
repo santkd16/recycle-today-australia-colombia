@@ -7,3 +7,39 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 @media print{body.print-poster-only .slide,body.print-poster-only .references{display:none!important}body.print-poster-only #campaign{display:block!important;padding:0!important;margin:0!important;break-after:auto!important}body.print-poster-only #campaign .section-heading{display:none!important}body.print-poster-only #campaign .campaign-grid{display:block!important}body.print-poster-only #campaign .campaign-grid>*:not(.campaign-poster){display:none!important}body.print-poster-only #campaign .campaign-poster{min-height:93vh;width:100%;border:0!important}}
+
+/* Real campaign poster — section 05; original illustration kept as an image. */
+.campaign-poster{
+  display:block;
+  align-self:start;
+  width:100%;
+  min-height:0;
+  padding:0;
+  margin:0;
+  background:#074047;
+  border:1px solid #d1fbb74b;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 22px 60px #001c2750;
+}
+.campaign-poster::after{display:none}
+.poster-image-wrap{position:relative;width:100%;line-height:0}
+.campaign-art{display:block;width:100%;height:auto;object-fit:contain}
+.poster-qr-overlay{
+  position:absolute;
+  left:76.5%;
+  top:79.2%;
+  width:13.2%;
+  aspect-ratio:1;
+  line-height:0;
+  background:#fff;
+  padding:2px;
+  border-radius:4px;
+  box-shadow:0 0 0 2px #fff;
+}
+.poster-qr-overlay img{display:block;width:100%;height:100%;object-fit:contain}
+.campaign-poster-caption{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 19px;background:#063c39;color:#e6ffe7;font-size:12px;font-weight:800;flex-wrap:wrap}
+.campaign-poster-caption a{color:#c7f58a;text-decoration:underline;text-underline-offset:3px}
+.is-presenting .slide .campaign-poster{min-height:0}
+@media(max-width:700px){.campaign-poster{min-height:0;padding:0}.campaign-poster-caption{padding:12px 14px;font-size:11px}}
+@media print{body.print-poster-only #campaign .campaign-poster{min-height:0;width:100%;height:auto;break-inside:avoid}body.print-poster-only #campaign .campaign-poster-caption{display:none}}
