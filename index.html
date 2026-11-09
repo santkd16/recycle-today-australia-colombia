@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
+  <script src="assets/photo-loader.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to presentation</a>
@@ -42,23 +43,87 @@
       <section id="australia" class="slide page-width" data-slide="0" aria-labelledby="australia-title">
         <div class="section-heading"><div><p class="eyebrow"><span class="section-number">01 / 05</span> DISCOVER THE COUNTRY · PERSON 1</p><h2 id="australia-title">Hello from <span class="colored">Australia!</span> 🇦🇺</h2><p class="section-subtitle">“I am here in Australia. Let's explore its people, culture, technology and environmental challenges.”</p></div><div class="corner-symbol">✳</div></div>
         <div class="slide-grid">
-          <figure class="feature-photo australia-photo"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Sydney_opera_house_side_view.jpg/960px-Sydney_opera_house_side_view.jpg" alt="Sydney Opera House on the waterfront" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_opera_house_side_view.jpg?width=960';" loading="lazy" /><figcaption><span>SYDNEY OPERA HOUSE</span><small>Famous landmark (Sydney is not the capital). <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Sydney_opera_house_side_view.jpg">Photo: Matthew Field / Wikimedia Commons</a></small></figcaption></figure>
+          <figure class="feature-photo australia-photo"><img src="assets/au-tourism.svg" data-commons-title="Sydney opera house side view.jpg" alt="Illustration of Sydney Opera House with harbor" loading="lazy" /><figcaption><span>SYDNEY OPERA HOUSE</span><small>Famous landmark (Sydney is not the capital). <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Sydney_opera_house_side_view.jpg">Photo: Matthew Field / Wikimedia Commons</a></small></figcaption></figure>
           <div class="country-card"><span class="card-eyebrow">COUNTRY PROFILE</span><div class="mini-flag">🇦🇺</div><dl class="fact-list"><div><dt>Capital</dt><dd>Canberra</dd></div><div><dt>Population</dt><dd>27.92 million <small>(March 2026)</small></dd></div><div><dt>Main language</dt><dd>English</dd></div><div><dt>First Nations languages</dt><dd>Including Warlpiri and Yolŋu Matha</dd></div><div><dt>Traditional food</dt><dd>Meat pies and lamingtons</dd></div><div><dt>Technology</dt><dd>Bottle-return machines and container deposit schemes</dd></div></dl><a href="https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release" class="text-link" target="_blank" rel="noopener noreferrer">Source: Australian Bureau of Statistics ↗</a></div>
-          <article class="info-card map-card"><div class="card-top"><span>📍</span><div><h3>Where is Canberra?</h3><p>Capital city of Australia</p></div></div><iframe title="Map of Canberra, Australia, from OpenStreetMap" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=149.04%2C-35.36%2C149.21%2C-35.24&amp;layer=mapnik&amp;marker=-35.2809%2C149.1300"></iframe><a href="https://www.openstreetmap.org/?mlat=-35.2809&amp;mlon=149.1300#map=12/-35.2809/149.1300" class="text-link" target="_blank" rel="noopener noreferrer">Open interactive map ↗</a></article>
-          <article class="info-card story-card"><span class="info-icon">🥧</span><h3>Culture, food & people</h3><p>Australia is a multicultural country with rich First Nations traditions. Australians enjoy <strong>meat pies</strong> and <strong>lamingtons</strong>. English is the main language, alongside many Aboriginal and Torres Strait Islander languages.</p><div class="grammar-tag">MODAL VERB</div><p class="quote">“You <strong>should</strong> try a traditional meat pie.”</p></article>
-          <article class="info-card story-card"><span class="info-icon">♻️</span><h3>Environmental technology</h3><p>Programs such as New South Wales <a href="https://returnandearn.org.au/" target="_blank" rel="noopener noreferrer">Return and Earn</a> use collection points and reverse vending machines. People can return eligible drink containers for a refund.</p><div class="grammar-tag">FUTURE FORM</div><p class="quote">“We <strong>will</strong> learn from these programs.”</p></article>
+          <article class="info-card map-card topic-map"><div class="card-top"><span>📍</span><div><h3>Where is Canberra?</h3><p>Capital city of Australia</p></div></div><iframe title="Map of Canberra, Australia, from OpenStreetMap" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=149.04%2C-35.36%2C149.21%2C-35.24&amp;layer=mapnik&amp;marker=-35.2809%2C149.1300"></iframe><a href="https://www.openstreetmap.org/?mlat=-35.2809&amp;mlon=149.1300#map=12/-35.2809/149.1300" class="text-link" target="_blank" rel="noopener noreferrer">Open interactive map ↗</a></article>
           
+          
+          
+          <div class="topic-trio-heading"><strong>Three things to discover in Australia 🇦🇺</strong><span>Same three topics · photos below the explanations</span></div>
+
+          <article class="info-card country-topic" data-country="au" data-topic="nature">
+            <div class="topic-label"><span>🐨 Wildlife & nature</span><small>01 / 03</small></div>
+            <p>Australia is home to <strong>koalas, kangaroos and eucalyptus forests</strong>. Protecting native habitats helps wildlife survive.</p>
+            <p class="topic-spoken">“If we protect natural habitats, animals will have a safer future.”</p>
+            <figure class="topic-picture">
+              <img src="assets/au-nature.svg" data-commons-title="Koala in Taronga Zoo, Australia.jpg" alt="koala · australia" loading="lazy" width="800" height="480" />
+              <figcaption><strong>KOALA · AUSTRALIA</strong><a href="https://commons.wikimedia.org/wiki/File:Koala_in_Taronga_Zoo,_Australia.jpg" target="_blank" rel="noopener noreferrer">Photo: Yimhaa · Wikimedia Commons (CC0) ↗</a></figcaption>
+            </figure>
+          </article>
+
+          <article class="info-card country-topic" data-country="au" data-topic="food">
+            <div class="topic-label"><span>🥧 Gastronomy</span><small>02 / 03</small></div>
+            <p>Traditional Australian food includes <strong>meat pies</strong> and sweet <strong>lamingtons</strong>. Food is a simple way to discover another culture.</p>
+            <p class="topic-spoken">“You should try an Australian meat pie.”</p>
+            <figure class="topic-picture">
+              <img src="assets/au-food.svg" data-commons-title="Aussie meat pie.jpg" alt="australian meat pie" loading="lazy" width="800" height="480" />
+              <figcaption><strong>AUSTRALIAN MEAT PIE</strong><a href="https://commons.wikimedia.org/wiki/File:Aussie_meat_pie.jpg" target="_blank" rel="noopener noreferrer">Photo: Finbar.concaig · Wikimedia Commons (CC BY-SA) ↗</a></figcaption>
+            </figure>
+          </article>
+
+          <article class="info-card country-topic" data-country="au" data-topic="tourism">
+            <div class="topic-label"><span>🏙️ Tourism & culture</span><small>03 / 03</small></div>
+            <p>The <strong>Sydney Opera House</strong> is a famous landmark. Australia also has rich Aboriginal and Torres Strait Islander cultures.</p>
+            <p class="topic-spoken">“If I visited Sydney, I would see the Opera House.”</p>
+            <figure class="topic-picture">
+              <img src="assets/au-tourism.svg" data-commons-title="Sydney opera house side view.jpg" alt="sydney opera house" loading="lazy" width="800" height="480" />
+              <figcaption><strong>SYDNEY OPERA HOUSE</strong><a href="https://commons.wikimedia.org/wiki/File:Sydney_opera_house_side_view.jpg" target="_blank" rel="noopener noreferrer">Photo: Wikimedia Commons · Original file ↗</a></figcaption>
+            </figure>
+          </article>
+          <div class="country-eco-note"><strong>♻ Recycling link:</strong> Australia uses programs such as <a href="https://returnandearn.org.au/" target="_blank" rel="noopener noreferrer">Return and Earn</a>, which collects eligible bottles and cans for refunds. <span>We can learn from these strategies.</span></div>
         </div>
       </section>
       <section id="colombia" class="slide page-width" data-slide="1" aria-labelledby="colombia-title">
         <div class="section-heading"><div><p class="eyebrow"><span class="section-number">02 / 05</span> OUR CONTEXT · PERSON 2</p><h2 id="colombia-title">Welcome to <span class="colored">Colombia!</span> 🇨🇴</h2><p class="section-subtitle">“I am visiting Bogotá. We have amazing biodiversity, but plastic waste is also a challenge for our communities.”</p></div><div class="corner-symbol">✳</div></div>
         <div class="slide-grid">
           <div class="country-card"><span class="card-eyebrow">COUNTRY PROFILE</span><div class="mini-flag">🇨🇴</div><dl class="fact-list"><div><dt>Capital</dt><dd>Bogotá D.C.</dd></div><div><dt>Population</dt><dd>About 53.3 million <small>(2025 estimate)</small></dd></div><div><dt>Main language</dt><dd>Spanish</dd></div><div><dt>Native languages</dt><dd>68 ethnic native languages (65 Indigenous, 2 Creole and Romani)</dd></div><div><dt>Traditional food</dt><dd>Arepas, bandeja paisa and coffee</dd></div><div><dt>Main challenge</dt><dd>Reducing single-use plastic and improving waste separation</dd></div></dl><a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion" class="text-link" target="_blank" rel="noopener noreferrer">Source: DANE ↗</a></div>
-          <figure class="feature-photo colombia-photo"><img src="https://bogota.gov.co/sites/default/files/2022-05/bogota_panoramica_invest.jpg" alt="Panoramic view of Bogotá's buildings and mountains" loading="lazy" /><figcaption><span>BOGOTÁ · COLOMBIA</span><small>Our capital in the Andes · <a href="https://bogota.gov.co/internacional/bogota-entre-las-mejores-capitales-de-america-latina-para-invertir" target="_blank" rel="noopener noreferrer">Photo: Bogotá city government</a></small></figcaption></figure>
-          <article class="info-card map-card"><div class="card-top"><span>📍</span><div><h3>Where is Bogotá?</h3><p>Capital city of Colombia</p></div></div><iframe title="Map of Bogotá, Colombia, from OpenStreetMap" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.16%2C4.55%2C-73.99%2C4.74&amp;layer=mapnik&amp;marker=4.7110%2C-74.0721"></iframe><a href="https://www.openstreetmap.org/?mlat=4.7110&amp;mlon=-74.0721#map=12/4.7110/-74.0721" class="text-link" target="_blank" rel="noopener noreferrer">Open interactive map ↗</a></article>
-          <article class="info-card story-card"><span class="info-icon">🗣️</span><h3>Languages & diversity</h3><p>Colombia has <strong>65 Indigenous languages</strong>, two Creole languages and Romani. These are an important part of our cultural heritage.</p><p class="source-mini">Reference: <a href="https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Paginas/default.aspx" target="_blank" rel="noopener noreferrer">Ministry of Culture</a></p><div class="grammar-tag">MODAL VERB</div><p class="quote">“We <strong>must</strong> respect our cultural diversity.”</p></article>
-          <article class="info-card story-card"><span class="info-icon">🌿</span><h3>Plastic waste in Colombia</h3><p>Plastic bags, bottles and packaging can contaminate streets and rivers if we use and discard them carelessly. Recycling associations help recover materials and support local livelihoods.</p><div class="grammar-tag">ZERO CONDITIONAL</div><p class="quote">“If people separate waste, recycling becomes easier.”</p></article>
+          <figure class="feature-photo colombia-photo"><img src="assets/co-tourism.svg" data-commons-title="Cartagena de Indias.jpg" alt="Illustration of Cartagena de Indias colonial architecture" loading="lazy" /><figcaption><span>BOGOTÁ · COLOMBIA</span><small>Our capital in the Andes · <a href="https://bogota.gov.co/internacional/bogota-entre-las-mejores-capitales-de-america-latina-para-invertir" target="_blank" rel="noopener noreferrer">Photo: Bogotá city government</a></small></figcaption></figure>
+          <article class="info-card map-card topic-map"><div class="card-top"><span>📍</span><div><h3>Where is Bogotá?</h3><p>Capital city of Colombia</p></div></div><iframe title="Map of Bogotá, Colombia, from OpenStreetMap" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.16%2C4.55%2C-73.99%2C4.74&amp;layer=mapnik&amp;marker=4.7110%2C-74.0721"></iframe><a href="https://www.openstreetmap.org/?mlat=4.7110&amp;mlon=-74.0721#map=12/4.7110/-74.0721" class="text-link" target="_blank" rel="noopener noreferrer">Open interactive map ↗</a></article>
           
+          
+          
+          <div class="topic-trio-heading"><strong>Three things to discover in Colombia 🇨🇴</strong><span>Same three topics · photos below the explanations</span></div>
+
+          <article class="info-card country-topic" data-country="co" data-topic="nature">
+            <div class="topic-label"><span>🐻 Wildlife & nature</span><small>01 / 03</small></div>
+            <p>Colombia has <strong>Andean bears, orchids and diverse forests</strong>. These ecosystems are valuable and need protection.</p>
+            <p class="topic-spoken">“If we protect forests, native animals will have safer homes.”</p>
+            <figure class="topic-picture">
+              <img src="assets/co-nature.svg" data-commons-title="Tremarctos ornatus 165975083.jpg" alt="spectacled bear · colombia" loading="lazy" width="800" height="480" />
+              <figcaption><strong>SPECTACLED BEAR · COLOMBIA</strong><a href="https://commons.wikimedia.org/wiki/File:Tremarctos_ornatus_165975083.jpg" target="_blank" rel="noopener noreferrer">Photo: Jonathan Candil Méndez · Wikimedia Commons (CC BY) ↗</a></figcaption>
+            </figure>
+          </article>
+
+          <article class="info-card country-topic" data-country="co" data-topic="food">
+            <div class="topic-label"><span>🍲 Gastronomy</span><small>02 / 03</small></div>
+            <p>Colombians enjoy <strong>arepas, bandeja paisa and coffee</strong>. Recipes and local ingredients reflect our cultural diversity.</p>
+            <p class="topic-spoken">“You should try a Colombian arepa.”</p>
+            <figure class="topic-picture">
+              <img src="assets/co-food.svg" data-commons-title="Bandeja Paisa (Bogotá).jpg" alt="bandeja paisa" loading="lazy" width="800" height="480" />
+              <figcaption><strong>BANDEJA PAISA</strong><a href="https://commons.wikimedia.org/wiki/File:Bandeja_Paisa_(Bogot%C3%A1).jpg" target="_blank" rel="noopener noreferrer">Photo: Edgar Zuniga Jr. · Wikimedia Commons (CC BY) ↗</a></figcaption>
+            </figure>
+          </article>
+
+          <article class="info-card country-topic" data-country="co" data-topic="tourism">
+            <div class="topic-label"><span>🏛️ Tourism & culture</span><small>03 / 03</small></div>
+            <p><strong>Cartagena</strong> is known for its historic center, colorful streets and Caribbean culture. Colombia also celebrates many regional traditions.</p>
+            <p class="topic-spoken">“If I visited Cartagena, I would explore the old city.”</p>
+            <figure class="topic-picture">
+              <img src="assets/co-tourism.svg" data-commons-title="Cartagena de Indias.jpg" alt="cartagena de indias" loading="lazy" width="800" height="480" />
+              <figcaption><strong>CARTAGENA DE INDIAS</strong><a href="https://commons.wikimedia.org/wiki/File:Cartagena_de_Indias.jpg" target="_blank" rel="noopener noreferrer">Photo: Maoroamunoz · Wikimedia Commons ↗</a></figcaption>
+            </figure>
+          </article>
+          <div class="country-eco-note"><strong>♻ Recycling link:</strong> Plastic bags, bottles and packaging can pollute our communities. Local recyclers help collect valuable materials. <span>If we separate waste, recycling becomes easier.</span></div>
         </div>
       </section>
       <section id="compare" class="slide page-width" data-slide="2" aria-labelledby="compare-title">
