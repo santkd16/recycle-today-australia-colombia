@@ -103,6 +103,8 @@ function showVideo(videoId, localOnly = false) {
   document.getElementById('video-link').href = publicUrl;
   document.getElementById('video-link').textContent = localOnly ? 'Open your selected video ↗' : 'Watch the reference video ↗';
   document.getElementById('poster-qr').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(publicUrl);
+  const posterQrLink = document.getElementById('poster-qr-link');
+  if (posterQrLink) posterQrLink.href = publicUrl;
   return true;
 }
 function parseYouTubeId(input) {
