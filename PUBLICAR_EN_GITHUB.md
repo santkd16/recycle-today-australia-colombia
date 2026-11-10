@@ -1,60 +1,25 @@
-# Paso a paso — publicar en un REPOSITORIO NUEVO
+# GitHub Pages — English campaign (published)
 
-Este proyecto está listo para GitHub Pages. **No modifiques UI-UX ni taller8-uiux-mobile.**
+This project is published in the **dedicated** repository [santkd16/recycle-today-australia-colombia](https://github.com/santkd16/recycle-today-australia-colombia). The UI-UX repositories remain separate.
 
-## 1. Crear repositorio nuevo
+## Public links
 
-1. Abre https://github.com/new
-2. Propietario: `santkd16`.
-3. Nombre: `recycle-today-australia-colombia`.
-4. Visibilidad: **Public**.
-5. Crear repositorio vacío (**sin marcar README, .gitignore ni licencia**, ya están los archivos de la página).
+- Presentation: https://santkd16.github.io/recycle-today-australia-colombia/
+- Video (target of the poster QR): https://santkd16.github.io/recycle-today-australia-colombia/video.html
+- Direct MP4: https://santkd16.github.io/recycle-today-australia-colombia/assets/campaign-video.mp4
 
-## 2. Subir archivos de la carpeta descomprimida
+## Original campaign video
 
-Abre una terminal **dentro de `RECYCLE_TODAY_WEB`** y ejecuta:
+The 14.7-second original team video is stored in **assets/campaign-video.mp4**. The main page embeds it using HTML5 video, and a separate **video.html** page is suitable for QR scans. The SVG code **assets/campaign-video-qr.svg** and the QR printed inside **assets/poster-recycle-today.webp** both target video.html.
 
-```powershell
-git init -b main
-git add .
-git commit -m "Add final intercultural English presentation"
-git remote add origin https://github.com/santkd16/recycle-today-australia-colombia.git
-git push -u origin main
-```
+To replace the video in future, upload the new MP4 using the same repository file path and push to **main**. When the page path remains unchanged, the QR does not need regeneration.
 
-Puedes usar la subida de archivos de GitHub, pero ten en cuenta que necesitas conservar el archivo oculto `.nojekyll` y la carpeta oculta `.github/workflows/deploy.yml`; con Git son más fáciles de incluir.
+## Presenting in class
 
-## 3. Habilitar GitHub Pages
+1. Open the presentation and select **Present**.
+2. Navigate with Left/Right arrows; there are five main sections.
+3. Show the fifth section for the campaign poster, QR and video.
+4. Scan the poster QR with a phone to play the video.
+5. Select **Script** to use the podcast guide as practice.
 
-1. Abre https://github.com/santkd16/recycle-today-australia-colombia/settings/pages
-2. En **Build and deployment / Source**, selecciona **GitHub Actions**.
-3. Abre la pestaña **Actions** y el flujo **Deploy English presentation**.
-4. Usa **Run workflow** (si el workflow había fallado antes de habilitar Pages).
-5. Espera a que el workflow muestre el estado verde **Success**.
-6. Entonces abre: https://santkd16.github.io/recycle-today-australia-colombia/
-
-## 4. Personalizar el video del equipo
-
-En `script.js`, cambia el valor:
-
-```javascript
-const VIDEO_ID = 'fYzPZtXPSZg';
-```
-
-Sustituye los 11 caracteres entre comillas por el ID del video **original y público** del grupo. Después ejecuta:
-
-```powershell
-git add .
-git commit -m "Add our own campaign video"
-git push
-```
-
-El sitio publicará el video y actualizará automáticamente el QR. El video predeterminado es un **material de referencia de Naciones Unidas/UNEP**, no una grabación del grupo.
-
-## 5. Probar exposición
-
-- Abre la página y pulsa **Present** para mostrar solo las cinco secciones.
-- Utiliza las flechas izquierda/derecha, Inicio/Fin y Esc para navegar.
-- Pulsa **Script** para repasar el podcast de las tres personas.
-- La grabación del podcast requiere permiso de micrófono y guarda un archivo WebM **en el computador**, no en YouTube.
-- Las fotos, los mapas, el video y el QR requieren acceso a internet.
+Before presenting, confirm the phone has internet access and scan the QR once to ensure the hosted page opens correctly.
