@@ -110,3 +110,10 @@
 @media(max-width:980px){.topic-map{grid-template-columns:1fr 2fr}.topic-map .card-top{grid-column:1}.topic-map iframe{grid-column:2;grid-row:1/3}.topic-map>.text-link{grid-column:1}.info-card.country-topic{grid-column:span 6}.topic-trio-heading span{display:none}}
 @media(max-width:640px){.topic-map{grid-template-columns:1fr;gap:12px}.topic-map .card-top,.topic-map iframe,.topic-map>.text-link{grid-column:1;grid-row:auto}.topic-map iframe{height:190px}.info-card.country-topic{grid-column:span 12;min-height:unset}.topic-trio-heading strong{font-size:26px}.country-topic .topic-picture img{height:220px}.support-page-body .theme-card .topic-picture img{height:220px}}
 @media print{.country-topic .topic-picture img{max-height:150px}.topic-map iframe{display:none}}
+
+
+/* Original student campaign video and permanent QR (November 2026). */
+.video-frame video{display:block;width:100%;height:100%;aspect-ratio:16/9;object-fit:contain;background:#031318}
+.campaign-qr-static{display:block;max-width:180px;width:100%;height:auto;padding:8px;background:#fff;border:1px solid #bce8c4;border-radius:14px;margin:3px 0 13px}
+.poster-qr-overlay{background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important;z-index:3}
+.poster-qr-overlay:focus-visible{outline:3px solid #d7ff77;outline-offset:2px}
