@@ -1,9 +1,6 @@
 'use strict';
 
-/* EDIT THIS ONLY AFTER THE GROUP CREATES ITS OWN PUBLIC VIDEO:
-   Replace fYzPZtXPSZg with your 11-character YouTube video ID.
-   The initial reference video belongs to the United Nations / UNEP. */
-const VIDEO_ID = 'fYzPZtXPSZg';
+/* The original student campaign video is now hosted at assets/campaign-video.mp4 and displayed by video.html. */
 
 const slides = Array.from(document.querySelectorAll('[data-slide]'));
 const toolbar = document.getElementById('presentation-toolbar');
@@ -89,42 +86,6 @@ async function populateGallery(id, query) {
 }
 populateGallery('gallery-au', 'Australia Sydney Opera House Canberra photo');
 populateGallery('gallery-co', 'Colombia Bogota skyline Monserrate photo');
-
-// Set current shared video ID at page load. The QR-code service only receives the public video URL.
-function showVideo(videoId, localOnly = false) {
-  if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) return false;
-  const publicUrl = `https://www.youtube.com/watch?v=${videoId}`;
-  const iframe = document.createElement('iframe');
-  iframe.title = 'Environmental awareness video'; iframe.allowFullscreen = true; iframe.loading = 'lazy';
-  iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-  iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
-  document.getElementById('video-frame').replaceChildren(iframe);
-  document.getElementById('video-link').href = publicUrl;
-  document.getElementById('video-link').textContent = localOnly ? 'Open your selected video ↗' : 'Watch the reference video ↗';
-  document.getElementById('poster-qr').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(publicUrl);
-  const posterQrLink = document.getElementById('poster-qr-link');
-  if (posterQrLink) posterQrLink.href = publicUrl;
-  return true;
-}
-function parseYouTubeId(input) {
-  try {
-    const u = new URL(input.trim());
-    const hostname = u.hostname.toLowerCase().replace(/^www\./, '');
-    const candidate = hostname === 'youtu.be' ? u.pathname.slice(1).split('/')[0] :
-      (['youtube.com', 'm.youtube.com', 'youtube-nocookie.com'].includes(hostname)
-        ? (u.searchParams.get('v') || u.pathname.split('/').filter(Boolean).pop()) : null);
-    return /^[A-Za-z0-9_-]{11}$/.test(candidate || '') ? candidate : null;
-  } catch { return null; }
-}
-showVideo(VIDEO_ID);
-const videoFeedback = document.getElementById('video-feedback');
-document.getElementById('video-apply').addEventListener('click', () => {
-  const id = parseYouTubeId(document.getElementById('video-input').value);
-  if (!id) { videoFeedback.textContent = 'Invalid YouTube link. Example: https://youtu.be/XXXXXXXXXXX'; return; }
-  showVideo(id, true);
-  videoFeedback.textContent = 'Video + QR changed in this browser only. To update the website for everyone, change VIDEO_ID in script.js and publish again.';
-});
 
 const scriptPanel = document.getElementById('speaker-script');
 function showScript() {
