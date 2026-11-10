@@ -157,9 +157,7 @@
           <figure class="campaign-poster">
             <div class="poster-image-wrap">
               <img class="campaign-art" src="assets/poster-recycle-today.webp" alt="Illustrated Recycle Today, Protect Tomorrow campaign poster for Australia and Colombia, featuring recycling objectives, actions, key words and conditional sentences in English." loading="lazy" />
-              <a class="poster-qr-overlay" id="poster-qr-link" href="https://www.youtube.com/watch?v=fYzPZtXPSZg" target="_blank" rel="noopener noreferrer" title="Scan or open the campaign reference video">
-                <img id="poster-qr" alt="Working QR code to the environmental reference video" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DfYzPZtXPSZg" loading="lazy" />
-              </a>
+              <a class="poster-qr-overlay" id="poster-qr-link" href="video.html" target="_blank" rel="noopener noreferrer" aria-label="Open our original campaign video from the poster QR code"></a>
             </div>
             <figcaption class="campaign-poster-caption">
               <span>🎨 Our campaign poster · Australia × Colombia</span>
@@ -168,8 +166,29 @@
           </figure>
           <div class="action-panel"><p class="card-eyebrow">OUR GOALS</p><h3>What are we<br />going to do?</h3><ol class="action-list"><li><strong>LEARN</strong><span>Research Australian environmental initiatives.</span></li><li><strong>INFORM</strong><span>Create posters, talks and a short awareness video.</span></li><li><strong>COLLECT</strong><span>Plan a school collection of clean, dry recyclable materials.</span></li><li><strong>SUPPORT</strong><span>Invite a local recycler to explain separation and collection.</span></li><li><strong>MEASURE</strong><span>Count participants and report real results after an activity.</span></li></ol><p class="planning-disclaimer">These are <strong>proposed</strong> activities. We are not claiming they have already been completed.</p></div>
           <article class="info-card grammar-panel"><h3>Use English to inspire action</h3><div class="grammar-row"><span>MODAL VERB</span><p>Students <b>should</b> use reusable bottles.</p></div><div class="grammar-row"><span>FUTURE FORMS</span><p>We <b>will</b> organize a campaign. We <b>are going to</b> visit a recycler. We <b>are meeting</b> next Friday.</p></div><div class="grammar-row"><span>ZERO CONDITIONAL</span><p>If we separate waste, recycling <b>becomes</b> easier.</p></div><div class="grammar-row"><span>FIRST CONDITIONAL</span><p>If students participate, we <b>will reach</b> more people.</p></div><div class="grammar-row"><span>SECOND CONDITIONAL</span><p>If I were the mayor, I <b>would support</b> recycling education.</p></div><div class="grammar-row"><span>PAST PERFECT</span><p>Colombia <b>had passed</b> a plastics law before the 2024 resolution.</p></div></article>
-          <article class="info-card vocab-panel"><h3>Vocabulary bank</h3><div class="keyword-tags"><span>Recycling</span><span>Plastic waste</span><span>Climate action</span><span>Awareness</span><span>Community</span><span>Reusable bottle</span><span>Sustainability</span><span>Responsibility</span><span>Local recyclers</span><span>Clean environment</span></div><h3 class="contact-title">Contact & project details</h3><p>Team: <strong>Three English students</strong><br />Email: <strong>To be added with the group's permission</strong></p><p class="source-mini">Add the three names, teacher's name, group email and original video link before your final delivery.</p><a href="assets/poster-recycle-today.webp" download class="text-link">Download the illustrated campaign poster ↗</a></article>
-          <article class="video-panel"><div class="video-meta"><div><p class="card-eyebrow">PROMOTIONAL VIDEO + QR</p><h3>Watch, learn and share</h3><p>This is an <strong>existing United Nations / UNEP video</strong> used for educational reference. Replace it with your own video when you have recorded it.</p></div><div class="external-badge">📺 INTERNET VIDEO</div></div><div class="video-controls"><div class="video-frame" id="video-frame"><iframe title="Fighting Plastic Pollution: Time for Change — UN Environment Programme" src="https://www.youtube-nocookie.com/embed/fYzPZtXPSZg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="video-side"><h4>Link and QR</h4><a id="video-link" href="https://www.youtube.com/watch?v=fYzPZtXPSZg" target="_blank" rel="noopener noreferrer">Watch the reference video ↗</a><label for="video-input">Use your own YouTube video</label><div class="video-edit"><input id="video-input" type="url" placeholder="https://youtu.be/..." /><button id="video-apply" class="accent-btn" type="button">Update preview</button></div><p id="video-feedback" class="source-mini" role="status">This temporary change is saved only in your browser. To publish it for everyone, edit VIDEO_ID in script.js.</p><button type="button" id="print-poster" class="ghost-btn">🖨 Print campaign poster</button></div></div></article>
+          <article class="info-card vocab-panel"><h3>Vocabulary bank</h3><div class="keyword-tags"><span>Recycling</span><span>Plastic waste</span><span>Climate action</span><span>Awareness</span><span>Community</span><span>Reusable bottle</span><span>Sustainability</span><span>Responsibility</span><span>Local recyclers</span><span>Clean environment</span></div><h3 class="contact-title">Contact & project details</h3><p>Team: <strong>Three English students</strong><br />Email: <strong>To be added with the group's permission</strong></p><p class="source-mini">Add the three students' names, teacher's name and a group-approved contact email before your final delivery.</p><a href="assets/poster-recycle-today.webp" download class="text-link">Download the illustrated campaign poster ↗</a></article>
+          <article class="video-panel">
+            <div class="video-meta">
+              <div><p class="card-eyebrow">ORIGINAL CAMPAIGN VIDEO + QR</p>
+                <h3>Watch our group's video</h3>
+                <p>This is <strong>our campaign video</strong> about protecting nature and collecting plastic waste in Colombia. Scan the QR on the poster to open it on your phone.</p>
+              </div><div class="external-badge">🎬 OUR VIDEO · 15 SEC</div>
+            </div>
+            <div class="video-controls">
+              <div class="video-frame" id="video-frame"><video id="campaign-video" controls playsinline preload="metadata" poster="assets/poster-recycle-today.webp" aria-label="Our environmental awareness campaign video">
+                <source src="assets/campaign-video.mp4" type="video/mp4" />
+                Your browser does not support this video. <a href="assets/campaign-video.mp4">Open MP4 file</a>.
+              </video></div>
+              <div class="video-side">
+                <h4>Scan & watch</h4>
+                <a id="video-link" href="video.html" target="_blank" rel="noopener noreferrer">Open our campaign video ↗</a>
+                <a href="video.html" target="_blank" rel="noopener noreferrer" aria-label="Open our video from the QR"><img class="campaign-qr-static" alt="QR code linking to our original campaign video" src="assets/campaign-video-qr.svg" width="180" height="180" loading="lazy" /></a>
+                <p class="source-mini">The QR opens a public video page on this same website. No YouTube or WhatsApp account is required.</p>
+                <a class="text-link" href="assets/campaign-video.mp4" download="Recycle-Today-Campaign.mp4">Download our video (MP4) ↗</a>
+                <button type="button" id="print-poster" class="ghost-btn">🖨 Print campaign poster</button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
     </div>
@@ -193,7 +212,7 @@
       <a target="_blank" rel="noopener noreferrer" href="https://www.dcceew.gov.au/environment/protection/waste/publications/national-waste-policy-action-plan">DCCEEW — National Waste Policy Action Plan ↗</a>
       <a target="_blank" rel="noopener noreferrer" href="https://www.superservicios.gov.co/publicaciones">SuperServicios — Informe sectorial de aprovechamiento 2024 ↗</a>
       <a target="_blank" rel="noopener noreferrer" href="https://www.minambiente.gov.co/documento-normativa/resolucion-0803-del-24-de-junio-de-2024/">MinAmbiente — Resolution 0803 of 2024 ↗</a>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=fYzPZtXPSZg">United Nations / UNEP — Fighting Plastic Pollution, 2024 ↗</a>
+      <a target="_blank" rel="noopener noreferrer" href="video.html">Group campaign video — original production ↗</a>
       <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Sydney_opera_house_side_view.jpg">Matthew Field — Sydney Opera House photograph, Wikimedia Commons ↗</a>
       <a target="_blank" rel="noopener noreferrer" href="https://bogota.gov.co/internacional/bogota-entre-las-mejores-capitales-de-america-latina-para-invertir">Bogotá Mayor's Office — Bogotá panorama ↗</a>
       <a target="_blank" rel="noopener noreferrer" href="https://www.openstreetmap.org/copyright">Maps: © OpenStreetMap contributors ↗</a>
