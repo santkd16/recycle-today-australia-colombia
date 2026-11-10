@@ -9,7 +9,7 @@
 | **Slide 4:** organizations in both countries | Section 04 |
 | **Slide 5:** poster, slogan, logo, objectives, action plan, keywords | Section 05 |
 | Poster conditionals: First and Second Conditional | Section 05 |
-| Campaign video and QR | Section 05 (UNEP reference video; replace with original group video) |
+| Campaign video and QR | Section 05, original MP4, dedicated video.html and permanent scannable QR |
 | Contact | Section 05 (placeholder; team must choose public contact) |
 | Live podcast presentation | Podcast section and **GUION_PODCAST_3_PERSONAS.md** |
 | Modal verbs | Sections 01, 02, 05; oral script |
@@ -22,8 +22,8 @@
 
 ### Items the group must finish
 - [ ] Three students' names, teacher, course and delivery date.
-- [ ] Record original video if the rubric requires it; publish it online and update `VIDEO_ID`.
+- [x] Original video uploaded; QR verified and linked to the published video page.
 - [ ] Select a group-approved public contact email or social account for the poster.
-- [ ] Create a **new repository**; do **not** use `UI-UX` or `taller8-uiux-mobile`.
-- [ ] Enable GitHub Pages and verify the final public link.
+- [x] Dedicated English repository created without changing the UX repositories.
+- [x] GitHub Pages deployment enabled and published.
 - [ ] Practice and time the podcast.
