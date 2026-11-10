@@ -10,7 +10,7 @@ A complete responsive website for GitHub Pages, developed for a three-person liv
 2. **Colombia** — Bogotá, map, 53.3 million (2025 estimate), Spanish and ethnic native languages, food, images, plastic pollution.
 3. **Statistics** — Australia 67.5% resource recovery (2024–25) and Colombia 19.69% waste recovered in the public cleaning-service system (2024); the website explicitly explains why these indicators cannot be directly compared.
 4. **Organizations** — DCCEEW, APCO, Clean Up Australia; MinAmbiente, SuperServicios and local recycling associations.
-5. **Awareness campaign** — logo, poster, slogan, objectives, action plan, vocabulary, YouTube video, QR and grammatical structures.
+5. **Awareness campaign** — logo, poster, slogan, objectives, action plan, vocabulary, original 15-second MP4 video, permanent QR and grammatical structures.
 
 Additional final-phase deliverables: **live podcast script for 3 people, recording on the user's device, reflection, future forms, modal verbs, Zero / First / Second Conditionals, and Past Perfect**.
 
@@ -19,31 +19,28 @@ Additional final-phase deliverables: **live podcast script for 3 people, recordi
 - HTML5, CSS3 and vanilla JavaScript; no build or dependency installation required.
 - Keyboard presentation mode: **▶ Present**, **← →**, **Page Up / Page Down**, **Home / End**, **Esc**.
 - Maps: **OpenStreetMap**; credited photography: **Wikimedia Commons** and Bogotá city government.
-- Photo galleries use the public **Wikimedia Commons MediaWiki API**; no API key required.
-- Video: **YouTube's privacy-enhanced embed** (reference video from UNEP / United Nations).
-- QR code: **api.qrserver.com**, generated from the public YouTube link.
+- Country photography uses credited **Wikimedia Commons** images with local SVG illustrated fallbacks; no API key required.
+- Original group video: **assets/campaign-video.mp4**, embedded in the fifth section and on **video.html**.
+- Permanent QR code: **assets/campaign-video-qr.svg**, embedded in the downloadable poster and pointing to **video.html** on GitHub Pages.
 - Live podcast audio: browser's **MediaRecorder** and microphone access; downloaded locally, **never automatically uploaded**.
 - Responsive for phones and desktop; linked sources included on the site.
 
-## 🚀 Publish in a NEW GitHub repository (leave UX repositories untouched)
+## 🚀 Published site
 
-1. Visit **https://github.com/new** while signed into the account `santkd16`.
-2. Create a **public repository** called **`recycle-today-australia-colombia`**. Do not create it inside the UX project or rename the UX project.
-3. Upload **the contents of this ZIP**, not the enclosing folder: `index.html`, `styles.css`, `script.js`, `assets/`, `.nojekyll`, `.github/workflows/deploy.yml`, `README.md`, etc.
-4. Go to the new repository's **Settings → Pages**. Under **Build and deployment → Source**, select **GitHub Actions**.
-5. In **Actions → Deploy English presentation → Run workflow**, run the deployment, or push another change to `main`.
-6. When the green check appears, the website should be at **https://santkd16.github.io/recycle-today-australia-colombia/**.
+The website lives in the dedicated repository **santkd16/recycle-today-australia-colombia** (separate from UI/UX projects). GitHub Pages automatically deploys when commits are pushed to `main`.
 
-*Only claim the website is published after the GitHub Actions deployment succeeds.* The connected GitHub tool in this conversation does not expose the operation to create a new repository or administer GitHub Pages, so those steps require your account in the GitHub interface.
+- Presentation: https://santkd16.github.io/recycle-today-australia-colombia/
+- Original campaign video / QR destination: https://santkd16.github.io/recycle-today-australia-colombia/video.html
+- Full downloadable poster with the video QR: `assets/poster-recycle-today.webp`
 
 ## 🔧 Before the class
 
 - Replace "Three English students" with the three real student names and optionally teacher/course details in `index.html`.
-- Record the original team video. Replace `VIDEO_ID` in `script.js` with the 11-character ID from your team's public YouTube video. The page will show its video and QR automatically.
+- The group's original 14.7-second video is already published in `assets/campaign-video.mp4`; its `video.html` link and the poster's QR are connected.
 - Add a dedicated contact email **only if the group approves making it public**. Do not publish personal phone numbers.
 - Practice the script together; each person has a defined speaking part.
-- Check the external image API, video, QR and maps on the classroom Wi-Fi. The campaign's additional poster is saved locally in `assets/poster-campana.svg`.
-- If no internet is available, the page's headings, text, graphics and local poster still work; external services need connectivity.
+- Test the original video and scan the permanent QR on a phone before presenting. The downloadable full-color poster is `assets/poster-recycle-today.webp`.
+- The MP4, QR and poster are hosted within the site; maps and live Wikimedia photography need an internet connection.
 
 ## ⚠ Source accuracy
 
