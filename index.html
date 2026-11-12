@@ -192,9 +192,15 @@
         </div>
       </section>
     </div>
-    <section class="podcast-section page-width" id="podcast" aria-labelledby="podcast-title">
-      <div class="podcast-copy"><p class="eyebrow">BONUS · FINAL PHASE · THREE SPEAKERS</p><h2 id="podcast-title">A live <em>podcast</em><br />for three voices. 🎙</h2><p>Present the problem, compare the countries, explain your proposed solutions, and reflect on what governments had already done before the campaign.</p><div class="podcast-buttons"><button type="button" class="accent-btn" id="toggle-script">Open complete oral script</button><button type="button" class="ghost-btn" id="record-podcast">● Record locally</button><span id="record-feedback" role="status"></span></div></div>
-      <div class="podcast-art"><div class="microphone">🎙️</div><span>3<br /><small>SPEAKERS</small></span></div>
+    
+    <section id="podcast" class="speaker-notes-panel" aria-label="Guion para expositores" hidden>
+      <div class="speaker-notes-controls">
+        <strong>Guion de apoyo · 3 personas</strong>
+        <button id="toggle-script" class="ghost-btn" type="button">Mostrar / ocultar texto</button>
+        <button id="record-podcast" class="ghost-btn" type="button">● Grabar audio</button>
+        <span id="record-feedback" role="status"></span>
+        <button id="close-speaker-notes" class="ghost-btn" type="button">✕ Cerrar</button>
+      </div>
       <div id="speaker-script" class="speaker-script" hidden>
         <p class="script-intro">Use the script as practice, not as a replacement for speaking naturally. The text uses straightforward English (approximately A2–B1). Recommended: rehearse as a team and adapt the length to your teacher's timing.</p>
         <article><h3>🎤 Person 1 · Introduction & Australia</h3><p>“Hello, everyone! Welcome to our intercultural project: <em>Recycle Today, Protect Tomorrow</em>. Imagine we are visiting Australia! I am speaking to you from Canberra, the capital. Australia has about 27.9 million people. English is the main language, and First Nations communities have their own languages. The Sydney Opera House is a famous landmark, and Australians enjoy foods like meat pies and lamingtons. We <strong>should</strong> protect our environment. Australia <strong>has</strong> collection programs, and today we <strong>will</strong> learn from them.”</p></article>
@@ -220,6 +226,12 @@
     </div></section>
   </main>
   <footer class="footer"><span>♻ RECYCLE TODAY · PROTECT TOMORROW</span><span>Academic campaign · Australia × Colombia · 2026</span><a class="support-link" href="support-gallery.html" title="Optional reference material">Extra visual support ↗</a><a href="#home">Back to top ↑</a></footer>
+  
+  <aside id="speaker-cue" class="speaker-cue" aria-label="Guía discreta de turnos" hidden>
+    <div class="speaker-cue-top"><span>Orden de intervención</span><button type="button" id="speaker-cue-next" aria-label="Siguiente persona">›</button></div>
+    <div class="speaker-cue-sequence" id="speaker-cue-sequence"></div>
+    <span class="speaker-cue-current" id="speaker-cue-current" role="status"></span>
+  </aside>
   <div id="presentation-toolbar" class="presentation-toolbar" aria-label="Presentation controls" hidden><button type="button" id="prev-slide" aria-label="Previous slide">←</button><span id="current-slide">01 / 05</span><button type="button" id="next-slide" aria-label="Next slide">→</button><button type="button" id="exit-presentation" class="exit-present">Exit ✕</button></div>
 </body>
 </html>
