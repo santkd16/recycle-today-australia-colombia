@@ -15,8 +15,6 @@ function goToSlide(index) {
   slides.forEach((slide, i) => slide.classList.toggle('is-active', i === slideIndex));
   navLinks.forEach((link, i) => link.classList.toggle('active', i === slideIndex));
   document.getElementById('current-slide').textContent = `${String(slideIndex + 1).padStart(2, '0')} / 05`;
-  speakerCueStep=0;
-  renderSpeakerCue();
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
@@ -26,7 +24,7 @@ function setPresentation(shouldPresent) {
   toolbar.hidden = !presentation;
   document.getElementById('present-button').textContent = presentation ? '✕ Exit' : '▶ Present';
   if (presentation) goToSlide(slideIndex);
-  else { speakerCue.hidden=true; slides[slideIndex].scrollIntoView({ behavior: 'smooth' }); }
+  else slides[slideIndex].scrollIntoView({ behavior: 'smooth' });
 }
 
 startButtons.forEach(button => button.addEventListener('click', () => setPresentation(!presentation)));
@@ -49,52 +47,6 @@ document.addEventListener('keydown', e => {
   else if (e.key === 'End') { e.preventDefault(); goToSlide(slides.length - 1); }
 });
 
-
-/* Colored speaker sequence from the bilingual PDF (42 interventions).
-   1 green / 2 blue / 3 orange; no change to slide contents. */
-const speakerOrders=[
-  [1,2,1,3,2,1,3,2],
-  [3,1,2,3,1,2,3],
-  [1,2,3,1,2,3],
-  [2,1,3,1,2,3],
-  [1,3,2,3,1,2,3,1,2,3,1,2,3,1,2]
-];
-let speakerCueStep=0;
-const speakerCue=document.getElementById('speaker-cue');
-const speakerCueRow=document.getElementById('speaker-cue-sequence');
-const speakerCueCurrent=document.getElementById('speaker-cue-current');
-function renderSpeakerCue(){
-  const order=speakerOrders[slideIndex];
-  speakerCue.hidden=!presentation;
-  if(!presentation)return;
-  speakerCueRow.replaceChildren();
-  order.forEach((person,i)=>{
-    const chip=document.createElement('button');
-    chip.type='button';
-    chip.className='speaker-cue-step'+(speakerCueStep===i?' is-current':'');
-    chip.dataset.speaker=String(person);
-    chip.textContent=String(person);
-    chip.title='Turno '+(i+1)+': Persona '+person;
-    chip.setAttribute('aria-label',chip.title);
-    chip.setAttribute('aria-pressed',String(speakerCueStep===i));
-    chip.addEventListener('click',()=>{speakerCueStep=i;renderSpeakerCue()});
-    speakerCueRow.append(chip);
-  });
-  const closing=(slideIndex===4&&speakerCueStep>=9)?' · conclusión':'';
-  speakerCueCurrent.textContent='Persona '+order[speakerCueStep]+' · '+(speakerCueStep+1)+'/'+order.length+closing+' | Verde 1 · Azul 2 · Naranja 3';
-}
-document.getElementById('speaker-cue-next').addEventListener('click',()=>{
-  speakerCueStep=Math.min(speakerOrders[slideIndex].length-1,speakerCueStep+1);
-  renderSpeakerCue();
-});
-document.addEventListener('keydown',e=>{
- if(!presentation||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))return;
- if(e.key.toLowerCase()==='g')body.classList.toggle('is-cue-hidden');
- if(e.key.toLowerCase()==='n'){
-   speakerCueStep=Math.min(speakerOrders[slideIndex].length-1,speakerCueStep+1);
-   renderSpeakerCue();
- }
-});
 
 // Live pictures using Wikimedia's public MediaWiki API. Images link to their source/attribution pages.
 async function populateGallery(id, query) {
