@@ -147,5 +147,5 @@
 .speaker-notes-panel .speaker-script{display:block;max-height:none;overflow:visible}
 .speaker-notes-panel .speaker-script[hidden]{display:none!important}
 .speaker-notes-panel .ghost-btn{font-size:12px;padding:8px 10px;border-radius:10px}
-@media(max-width:700px){.speaker-cue{right:8px;bottom:70px;width:min(285px,calc(100vw - 20px));padding:8px}.speaker-cue-step{min-width:18px;height:19px}.speaker-notes-panel{inset:5vh 10px;padding:12px}}
+@media(max-width:700px){.speaker-notes-panel{inset:5vh 10px;padding:12px}}
 @media print{.speaker-cue,.speaker-notes-panel{display:none!important}}
