@@ -118,28 +118,20 @@
 .poster-qr-overlay{background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important;z-index:3}
 .poster-qr-overlay:focus-visible{outline:3px solid #d7ff77;outline-offset:2px}
 
-/* Minimal, noninteractive, gently blurred frame for the current voice.
-   Only visible in presentation mode. N changes speaker, G hides the frame. */
-.speaker-cue {
-  --speaker-accent: #9be6a5;
-  position: fixed;
-  inset: 13px;
-  z-index: 190;
-  pointer-events: none;
-  border: 1.5px solid var(--speaker-accent);
-  border-radius: 22px;
-  opacity: .40;
-  background: transparent;
-  box-shadow: 0 0 15px 1px color-mix(in srgb, var(--speaker-accent) 22%, transparent),
-              inset 0 0 16px 1px color-mix(in srgb, var(--speaker-accent) 15%, transparent);
-  transition: border-color .45s ease, box-shadow .45s ease, opacity .3s ease;
-}
-.speaker-cue[data-speaker="1"] { --speaker-accent:#9be6a5; }
-.speaker-cue[data-speaker="2"] { --speaker-accent:#89c5ff; }
-.speaker-cue[data-speaker="3"] { --speaker-accent:#ffbb83; }
-.speaker-cue[hidden],.is-cue-hidden .speaker-cue { display:none!important; }
-@media(max-width:700px){.speaker-cue{inset:8px;border-radius:16px;opacity:.35}}
-@media print{.speaker-cue{display:none!important}}
+/* Quiet presenter aid. Only displayed when presenting the five slides. */
+.speaker-cue{position:fixed;right:18px;bottom:86px;z-index:210;width:min(320px,calc(100vw - 36px));border:1px solid #d8f6df38;background:#062d32d9;color:#eafdf3;border-radius:13px;padding:9px 11px;box-shadow:0 8px 28px #001b1f45;backdrop-filter:blur(10px);opacity:.78;transition:opacity .15s}
+.speaker-cue:hover,.speaker-cue:focus-within{opacity:1}
+.speaker-cue[hidden],.is-cue-hidden .speaker-cue{display:none!important}
+.speaker-cue-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.speaker-cue-top>span{font-size:10px;font-weight:800;color:#c4e4d7}
+.speaker-cue-top>button{background:#ffffff0f;color:#defff1;border:1px solid #d8ffe32b;border-radius:6px;padding:0 9px;line-height:20px;font-size:19px;cursor:pointer}
+.speaker-cue-sequence{display:flex;flex-wrap:wrap;gap:4px}
+.speaker-cue-step{font:800 10px/1 var(--display);min-width:20px;height:20px;padding:3px 4px;border-radius:5px;border:1px solid currentColor;background:transparent;cursor:pointer;opacity:.52}
+.speaker-cue-step[data-speaker="1"]{color:#9be6a5}
+.speaker-cue-step[data-speaker="2"]{color:#89c5ff}
+.speaker-cue-step[data-speaker="3"]{color:#ffbb83}
+.speaker-cue-step.is-current{opacity:1;background:color-mix(in srgb,currentColor 19%,#05242d);box-shadow:0 0 0 1px currentColor}
+.speaker-cue-current{display:block;font-size:10px;color:#d6ebe1;margin-top:6px}
 .speaker-notes-panel{position:fixed;inset:8vh max(24px,8vw);z-index:520;background:#0b3439;color:#eaffee;border:1px solid #8eddaa66;border-radius:20px;box-shadow:0 25px 75px #00161edc;padding:19px;overflow:auto}
 .speaker-notes-panel[hidden]{display:none!important}
 .speaker-notes-controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:13px}
@@ -147,5 +139,5 @@
 .speaker-notes-panel .speaker-script{display:block;max-height:none;overflow:visible}
 .speaker-notes-panel .speaker-script[hidden]{display:none!important}
 .speaker-notes-panel .ghost-btn{font-size:12px;padding:8px 10px;border-radius:10px}
-@media(max-width:700px){.speaker-notes-panel{inset:5vh 10px;padding:12px}}
+@media(max-width:700px){.speaker-cue{right:8px;bottom:70px;width:min(285px,calc(100vw - 20px));padding:8px}.speaker-cue-step{min-width:18px;height:19px}.speaker-notes-panel{inset:5vh 10px;padding:12px}}
 @media print{.speaker-cue,.speaker-notes-panel{display:none!important}}
